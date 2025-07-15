@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/src/(.*)",
+      "destination": "/src/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/public/index.html"
     }
@@ -15,5 +19,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "public/index.html": {
+      "includeFiles": "src/**"
+    }
+  }
 }
