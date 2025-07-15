@@ -310,3 +310,23 @@ form textarea::placeholder {
 .cv-btn:hover::before {
     left: 100%;
 }
+
+/* UPDATED: Scroll Animation Classes */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Make the transition slightly faster for a snappier feel */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* This is now the "visible but faded" state */
+.fade-in-element.is-visible {
+    opacity: 0.4; /* Faded out */
+    transform: translateY(0) scale(0.98); /* Slightly smaller */
+}
+
+/* This is the "fully active" state */
+.fade-in-element.is-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}

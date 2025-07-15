@@ -211,4 +211,39 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
             });
         }
+        // REPLACED: New, more advanced scroll animation logic
+    const sections = document.querySelectorAll('.fade-in-element');
+    let activeSection = null;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // When a section becomes visible for the first time, mark it.
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+
+            // Find the entry that is most visible in the viewport
+            const mostVisible = entries.reduce((prev, current) => {
+                return (prev.intersectionRatio > current.intersectionRatio) ? prev : current;
+            });
+
+            // If there's a new most-visible section, update the active state
+            if (mostVisible.isIntersecting && mostVisible.target !== activeSection) {
+                // Remove active class from the old section
+                if (activeSection) {
+                    activeSection.classList.remove('is-active');
+                }
+                // Add active class to the new section
+                activeSection = mostVisible.target;
+                activeSection.classList.add('is-active');
+            }
+        });
+    }, {
+        // Trigger when a section is 50% or 75% visible
+        threshold: [0.5, 0.75]
     });
+
+    // Observe all sections
+    sections.forEach(section => observer.observe(section));
+});
+   
