@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadCVBtn.addEventListener('click', function() {
             // Create a temporary link element
             const link = document.createElement('a');
-            link.href = '../src/assets/ylviee_cv.pdf';
+            link.href = '/assets/ylviee_cv.pdf';
             link.download = 'Yarl_Villanueva_CV.pdf';
             link.target = '_blank';
             
