@@ -1,0 +1,312 @@
+:root {
+    --theme-bg-dark: #0B1222;
+    --theme-bg-mid: #1B263B;
+    --theme-bg-section: #14203A;
+    --theme-bg-card: #182447;
+    --theme-yellow: #FFD600;
+    --theme-accent: #54E0C7;
+    --theme-muted: #8ca1c3;
+    --theme-sub: #2c3e50; 
+    --theme-text: #ffffff;
+    --theme-ylvi: linear-gradient(135deg, #77E4C8 10%, #4535C1 100%);
+}
+
+/* Ylvi gradient text class */
+.ylvi-gradient-text {
+    background: var(--theme-ylvi);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Fallback for browsers that don't support background-clip */
+@supports not (-webkit-background-clip: text) {
+    .ylvi-gradient-text {
+        color: var(--theme-accent);
+    }
+}
+
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, var(--theme-bg-dark) 0%, var(--theme-bg-mid) 100%);
+    color: var(--theme-sub);
+    min-height: 100vh;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, var(--theme-bg-dark) 0%, var(--theme-bg-mid) 100%) !important;
+}
+
+.phone-gradient {
+    background: linear-gradient(135deg, var(--theme-bg-mid) 0%, var(--theme-bg-dark) 100%) !important;
+}
+
+.section-bg {
+    background: var(--theme-bg-section) !important;
+}
+
+.header-title {
+    color: var(--theme-yellow) !important;
+}
+
+.heading-main {
+    color: var(--theme-accent) !important;
+}
+
+.nav-link {
+    color: var(--theme-accent) !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--theme-yellow) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--theme-accent);
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+.contact-btn {
+    background-color: var(--theme-accent) !important;
+    color: #1a252f !important; 
+    transition: background 0.3s;
+}
+.contact-btn:hover {
+    background-color: #36b8a7 !important;
+}
+
+.text-theme-accent {
+    color: var(--theme-accent) !important;
+}
+.text-theme-muted {
+    color: var(--theme-muted) !important;
+}
+.text-theme-sub {
+    color: var(--theme-sub) !important;
+}
+
+.bg-theme-card {
+    background: var(--theme-bg-card) !important;
+}
+
+.border-theme-accent {
+    border-color: var(--theme-accent) !important;
+}
+
+.phone-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.tech-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+.fade-in-up-delay {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Mobile menu button animation */
+#mobileMenuBtn {
+    transition: all 0.3s ease;
+}
+
+#mobileMenuBtn:hover {
+    transform: scale(1.1);
+    color: var(--theme-yellow) !important;
+}
+
+/* Mobile menu links animation */
+.mobile-menu a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu.open a:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu.open a:nth-child(3) { transition-delay: 0.2s; }
+.mobile-menu.open a:nth-child(4) { transition-delay: 0.3s; }
+.mobile-menu.open a:nth-child(5) { transition-delay: 0.4s; }
+
+/* Ensure mobile menu is above everything */
+.mobile-menu {
+    z-index: 9999;
+}
+
+/* Hide mobile menu button on desktop */
+@media (min-width: 768px) {
+    #mobileMenuBtn {
+        display: none;
+    }
+}
+
+
+
+#profileImage {
+    transition: transform 0.3s ease;
+}
+
+#profileImage:hover {
+    transform: scale(1.05);
+}
+
+/* Phone mockup enhancements */
+.phone-gradient {
+    background: linear-gradient(135deg, var(--theme-bg-mid) 0%, var(--theme-bg-dark) 100%) !important;
+    position: relative;
+}
+
+.phone-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 3rem;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--theme-accent), var(--theme-yellow));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced smooth scrolling for webkit browsers */
+* {
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.header-scrolled {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Enhanced mobile menu */
+.mobile-menu {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+
+
+/* ...existing code... */
+
+/* Force all form inputs to use correct colors */
+form input,
+form textarea {
+    color: var(--theme-text) !important;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--theme-muted) !important;
+    opacity: 0.7;
+}
+
+/* ...existing code... */
+
+/* CV Button Styling */
+.cv-btn {
+    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-yellow) 100%);
+    color: var(--theme-bg-dark);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(84, 224, 199, 0.4);
+}
+
+.cv-btn:active {
+    transform: translateY(0);
+}
+
+/* CV Button Animation */
+.cv-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cv-btn:hover::before {
+    left: 100%;
+}

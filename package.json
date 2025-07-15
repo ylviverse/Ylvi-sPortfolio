@@ -1,0 +1,12 @@
+{
+    "name": "ylvi-portfolio",
+    "version": "1.0.0",
+    "description": "Ylvi's personal portfolio website",
+    "main": "public/index.html",
+    "scripts": {
+      "start": "live-server public",
+      "build": "echo 'No build needed for static site with CDN Tailwind'"
+    },
+    "author": "Yarl Villanueva",
+    "license": "MIT"
+  }
