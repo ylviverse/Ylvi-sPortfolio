@@ -3,6 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
+@font-face {
+    font-family: 'Seanor';
+    src: url('/assets/roldes.otf' );
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Improves loading performance */
+}
+
+.font-seanor {
+    font-family: 'Seanor', serif !important;
+    font-weight: normal;
+    font-style: normal;
+   
+}
+
+
 :root {
     --theme-bg-dark: #0B1222;
     --theme-bg-mid: #1B263B;
@@ -14,6 +30,7 @@
     --theme-sub: #2c3e50; 
     --theme-text: #ffffff;
     --theme-ylvi: linear-gradient(135deg, #EEAEAE 10%, #94BBE9 100%);
+
 }
 
 /* Ylvi gradient text class */
@@ -44,7 +61,11 @@ body {
     color: var(--theme-sub);
     min-height: 100vh;
 }
-
+.gradient-lyer{
+    background: #101F06 ;
+    position: relative;
+    z-index: 1;
+}
 .gradient-bg {
     background: linear-gradient(135deg, var(--theme-bg-dark) 0%, var(--theme-bg-mid) 100%) !important;
 }
