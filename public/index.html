@@ -12,13 +12,16 @@
 <body class="gradient-bg min-h-screen">
     <!-- Header -->
     <header class="flex justify-between items-center px-4 md:px-8 py-6 gradient-bg">
-        <h1 class="text-xl md:text-2xl font-bold header-title fade-in-up ylvi-gradient-text">YLVI'S PORTFOLIO</h1>
+        
+        <a href="#about" class="fade-in-up">
+            <img src="/assets/branding_ylviee.svg" alt="Ylvi's Portfolio Logo" class="h-10 md:h-12">
+        </a>
         
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-8 fade-in-up">
-            <a href="#home" class="nav-link text-theme-accent text-lg font-semibold">HOME</a>
-            <a href="#project" class="nav-link text-theme-sub text-lg font-semibold">PROJECTS</a>
-            <a href="#about" class="nav-link text-theme-sub text-lg font-semibold">ABOUT</a>
+            <a href="#home" class="nav-link text-theme-accent text-lg font-bold">HOME</a>
+            <a href="#project" class="nav-link text-theme-sub text-lg font-bold">PROJECTS</a>
+            <a href="#about" class="nav-link text-theme-sub text-lg font-bold">ABOUT</a>
         </nav>
         
         <!-- Mobile Menu Button -->
@@ -53,9 +56,11 @@
     </div>
 
     <!-- Main Content -->
-    <main class="flex flex-col lg:flex-row items-center justify-center min-h-[80vh] px-4 md:px-8 space-y-8 lg:space-y-0 lg:space-x-16">
+       <!-- Main Content -->
+       <main class="flex flex-col lg:flex-row items-center justify-center min-h-[80vh] px-4 md:px-8 space-y-8 lg:space-y-0 lg:space-x-16 py-16 lg:py-0">
         <!-- Phone Mockup -->
         <div class="relative fade-in-up">
+           
             <!-- Phone Notch -->
             <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 md:w-24 h-4 md:h-5 bg-black rounded-b-xl z-20"></div>
             
@@ -83,6 +88,8 @@
                                 autoplay>
                             </lottie-player>
                         </div>
+
+                        
                     </div>
                     
                     <!-- Phone Bottom Bar -->
@@ -266,8 +273,8 @@
                     </p>
                 </div>
                 <div class="flex justify-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-theme-accent">
-                        <img src="/assets/dash.png" alt="Profile" class="w-full h-full object-cover">
+                    <div class="w-60 h-60 isolate">
+                        <img src="/assets/branding_ylviee.svg" alt="Profile" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
