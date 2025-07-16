@@ -18,10 +18,10 @@
         </a>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-8 fade-in-up">
-            <a href="#home" class="nav-link text-theme-accent text-lg font-bold ">HOME</a>
-            <a href="#project" class="nav-link text-theme-sub text-lg font-bold">PROJECTS</a>
-            <a href="#about" class="nav-link text-theme-sub text-lg font-bold">ABOUT</a>
+        <nav class="hidden md:flex space-x-20 fade-in-up">
+            <a href="#home" class="nav-link text-theme-muted text-lg font-Pop ">HOME</a>
+            <a href="#project" class="nav-link text-theme-muted text-lg font-Pop">PROJECTS</a>
+            <a href="#about" class="nav-link text-theme-muted text-lg font-Pop">ABOUT</a>
         </nav>
         
         <!-- Mobile Menu Button -->
@@ -32,7 +32,7 @@
         </button>
         
         <!-- Desktop Contact Button -->
-        <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="hidden md:block contact-btn px-6 py-2 rounded-full font-semibold transition-colors fade-in-up">
+        <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="hidden md:block contact-btn px-6 py-2 rounded-full font-Pop transition-colors fade-in-up">
             CONTACT ME
         </button>
     </header>
@@ -48,10 +48,10 @@
             </button>
             
             <!-- Mobile Navigation Links -->
-            <a href="#home" class="nav-link text-theme-accent text-2xl font-semibold hover:text-theme-yellow transition-colors">HOME</a>
-            <a href="#project" class="nav-link text-theme-sub text-2xl font-semibold hover:text-theme-yellow transition-colors">PROJECTS</a>
-            <a href="#about" class="nav-link text-theme-sub text-2xl font-semibold hover:text-theme-yellow transition-colors">ABOUT</a>
-            <a href="#contact" class="nav-link text-theme-sub text-2xl font-semibold hover:text-theme-yellow transition-colors">CONTACT</a>
+            <a href="#home" class="nav-link text-theme-accent text-2xl font-Pop hover:text-theme-yellow transition-colors">HOME</a>
+            <a href="#project" class="nav-link text-theme-sub text-2xl font-Pop hover:text-theme-yellow transition-colors">PROJECTS</a>
+            <a href="#about" class="nav-link text-theme-sub text-2xl font-Pop hover:text-theme-yellow transition-colors">ABOUT</a>
+            <a href="#contact" class="nav-link text-theme-sub text-2xl font-Pop hover:text-theme-yellow transition-colors">CONTACT</a>
         </div>
     </div>
 
@@ -100,8 +100,8 @@
         
         <!-- Content Section -->
         <div class="text-center lg:text-left max-w-md fade-in-up-delay">
-            <p class="text-1xl md:text-1xl text-theme-sub uppercase text-sm tracking-wider mb-4 font-bold">Hi, I am</p>
-            <h2 class="text-2xl md:text-2xl text-theme-sub heading-main mb-4 font-semibold">YARL VILLANUEVA</h2>
+            <p class="text-1xl md:text-1xl font-Pop text-theme-sub uppercase text-sm tracking-wider mb-4 ">Hi, I am</p>
+            <h2 class="text-2xl md:text-2xl font-Pop text-theme-sub heading-main mb-4 ">YARL VILLANUEVA</h2>
             <p class="text-4xl md:text-4xl text-theme-muted  text-lg mb-2 font-monofett-regular">A FLUTTER DEVELOPER</p>
             
             
@@ -129,14 +129,14 @@
 
             <!-- Download CV and Contact Buttons -->
             <div class="flex flex-col md:flex-row justify-center lg:justify-start space-y-4 md:space-y-0 md:space-x-4 mb-8">
-                <button id="downloadCV" class="cv-btn px-6 py-3 rounded-full font-semibold transition-colors flex items-center justify-center space-x-2">
+                <button id="downloadCV" class="cv-btn px-6 py-3 rounded-full font-Pop transition-colors flex items-center justify-center space-x-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                     <span>Download CV</span>
                 </button>
     
-                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="md:hidden contact-btn px-6 py-3 rounded-full font-semibold transition-colors">
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="md:hidden contact-btn px-6 py-3 rounded-full font-Pop transition-colors">
                     Contact Me
                 </button>
             </div>
@@ -144,10 +144,10 @@
     </main>
 
     <!-- Home Section -->
-    <section id="home" class="py-20 px-4 md:px-8 section-bg fade-in-element">
+    <section id="home" class="py-20 px-6 md:px-8 section-bg fade-in-element">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold heading-main mb-6 font-bold">Welcome To My Portfolio</h2>
-            <p class="text-theme-muted text-lg mb-8">
+            <h2 class="text-3xl md:text-4xl font-Poppins-Bold  heading-main mb-6 font-bold">WELCOME TO MY PORTFOLIO</h2>
+            <p class="text-theme-muted font-Pop text-lg mb-4">
                 I'm a software engineer, dedicated to creating beautiful and functional mobile applications using the Flutter framework. With experience in tools like Firebase, Supabase, and TensorFlow, I aim to bring ideas to life through scalable code and intuitive user interfaces. I integrate the power of AI into apps to deliver smarter, more dynamic user experiences. My mission is to craft thoughtful solutions through clean design, reliable performance, and attention to user needs. Scroll down to explore my work and see how I can help bring your next project to life.
             </p>
         </div>
@@ -156,7 +156,7 @@
     <!-- Projects Section -->
     <section id="project" class="py-20 px-4 md:px-8 gradient-bg fade-in-element">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold heading-main mb-8 text-center font-bold">My Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-Poppins-Bold uppercase heading-main mb-8 text-center font-bold">My Projects</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Agrolens Project -->
                 <div class="bg-theme-card p-6 rounded-lg">
@@ -164,9 +164,9 @@
                         <div class="w-12 h-12 bg-transparent rounded-xl flex items-center justify-center mr-3">
                             <img src="/assets/agrolens_logo_transparent.png" alt="Agrolens Logo" class="w-10 h-10 object-contain">
                         </div>
-                        <h3 class="text-xl font-bold header-title">Agrolens</h3>
+                        <h3 class="text-xl font-Poppins-Bold header-title">Agrolens</h3>
                     </div>
-                    <p class="text-theme-muted mb-6">A flutter app built for farmers in detecting rice leaf disease using CNN models</p>
+                    <p class="text-theme-muted mb-6 font-Pop">A flutter app built for farmers in detecting rice leaf disease using CNN models</p>
                     
                     <div class="flex justify-center mb-4">
                         <div class="relative">
@@ -193,18 +193,18 @@
                     </div>
                     
                     <div class="flex justify-center space-x-3 mt-4">
-                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-semibold hover:bg-theme-yellow transition-colors">
+                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-Pop hover:bg-theme-yellow transition-colors">
                             Source Code:
                         </button>
-                        <button onclick="window.open('https://github.com/ylviverse/agrolens', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-semibold hover:bg-theme-ylvi hover:text-theme-bg-dark transition-colors">
+                        <button onclick="window.open('https://github.com/ylviverse/agrolens', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-Pop hover:bg-theme-ylvi hover:text-theme-bg-dark transition-colors">
                             GitHub
                         </button>
                     </div>
                     <div class="flex justify-center space-x-3 mt-4">
-                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-semibold hover:bg-theme-yellow transition-colors">
+                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-Pop hover:bg-theme-yellow transition-colors">
                             App Demo:
                         </button>
-                        <button onclick="window.open('https://youtube.com/shorts/XDyNUVTOH1k?si=fSvLTSM87kW7tguD', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-semibold hover:bg-theme-accent hover:text-theme-bg-dark transition-colors">
+                        <button onclick="window.open('https://youtube.com/shorts/XDyNUVTOH1k?si=fSvLTSM87kW7tguD', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-Pop hover:bg-theme-accent hover:text-theme-bg-dark transition-colors">
                             Youtube
                         </button>
                     </div>
@@ -216,9 +216,9 @@
                         <div class="w-12 h-12 bg-transparent rounded-xl flex items-center justify-center mr-3">
                             <img src="/assets/Logo_Final-removebg-preview.png" alt="Vehicall Logo" class="w-10 h-10 object-contain">
                         </div>
-                        <h3 class="text-xl font-bold header-title">Vehicall</h3>
+                        <h3 class="text-xl font-Poppins-Bold header-title">Vehicall</h3>
                     </div>
-                    <p class="text-theme-muted mb-6">A vehicle rental app made entirely with flutter, complete with a backend integration through SUPABASE, a messaging system, and profile section. User can upload contents of their vehicles for rent or for sale.</p>
+                    <p class="text-theme-muted mb-6 font-Pop">A vehicle rental app made entirely with flutter, complete with a backend integration through SUPABASE, a messaging system, and profile section. User can upload contents of their vehicles for rent or for sale.</p>
                     
                     <div class="flex justify-center mb-4">
                         <div class="relative">
@@ -238,18 +238,18 @@
                     </div>
                     
                     <div class="flex justify-center space-x-3 mt-4">
-                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-semibold hover:bg-theme-yellow transition-colors">
+                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-Pop hover:bg-theme-yellow transition-colors">
                             Source Code:
                         </button>
-                        <button onclick="window.open('https://github.com/ylviverse/vehicall', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-semibold hover:bg-theme-ylvi hover:text-theme-bg-dark transition-colors">
+                        <button onclick="window.open('https://github.com/ylviverse/vehicall', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-Pop hover:bg-theme-ylvi hover:text-theme-bg-dark transition-colors">
                             GitHub
                         </button>
                     </div>
                     <div class="flex justify-center space-x-3 mt-4">
-                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-semibold hover:bg-theme-yellow transition-colors">
+                        <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-Pop hover:bg-theme-yellow transition-colors">
                             App Demo:
                         </button>
-                        <button class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-semibold hover:bg-theme-accent hover:text-theme-bg-dark transition-colors">
+                        <button onclick="window.open('https://youtube.com/shorts/JzJn4BIz8_A?si=HM09EWLSwyRBOUnt', '_blank')" class="px-4 py-2 border border-theme-accent text-theme-accent rounded-lg text-sm font-Pop hover:bg-theme-accent hover:text-theme-bg-dark transition-colors">
                             Youtube
                         </button>
                     </div>
@@ -261,22 +261,26 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-4 md:px-8 section-bg fade-in-element">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold heading-main mb-8 text-center font-bold">About Me</h2>
+            <h2 class="text-3xl md:text-4xl heading-main mb-8 text-center font-Poppins-Bold uppercase">About Me</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <p class="text-theme-muted mb-4">
+                    <p class="text-theme-muted mb-4 font-Pop">
                         Hi! I'm Yarl Villanueva or Ylvi, a passionate Flutter developer based in the Philippines, with a keen interest in building innovative mobile applications. I specialize in creating cross-platform apps that are not only functional but also visually appealing.<br><br>
                         I'm currently in my 4th and final year in Father Saturnino Urios University undertaking my degree in Bachelor of Science in Computer Science.
                     </p>
-                    <p class="text-theme-muted mb-4">
+                    <p class="text-theme-muted mb-4 font-Pop">
                         My expertise includes state management, AI integration, backend implementation using Firebase and Supabase, and creating beautiful UIs. <br><br> Currently I'm expanding my interest in Swift for Native iOS development<br><br>If you are interested in my skill set feel free to reach me by sending a message below
                     </p>
                 </div>
                 <div class="flex justify-center">
-                    <div class="w-60 h-60 isolate">
-                        <img src="/assets/branding_ylviee.svg" alt="Profile" class="w-full h-full object-cover">
+                    <div class="isolate w-40 h-40 aspect-square overflow-hidden">
+                      <img 
+                        src="/assets/yarl_Logo_True.svg" 
+                        alt="Profile" 
+                        class="w-full h-full object-contain" 
+                      />
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
     </section>
@@ -284,7 +288,7 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-4 md:px-8 gradient-bg fade-in-element">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold heading-main mb-8 text-center font-bold">Get In Touch</h2>
+            <h2 class="text-3xl md:text-4xl font-bold heading-main mb-8 text-center font-Poppins-Bold uppercase">Get In Touch</h2>
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="https://www.instagram.com/ylvvie" target="_blank" rel="noopener noreferrer" class="tech-icon w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors" title="Instagram">
                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -305,20 +309,20 @@
                 </a>
             </div>
             <div class="text-center mb-8">
-                <p class="text-theme-sub">Email: <a href="mailto:yarlvillamon@gmail.com" class="text-theme-accent hover:underline">yarlvillamon@gmail.com</a></p>
+                <p class="text-theme-sub font-Pop">Email: <a href="mailto:yarlvillamon@gmail.com" class="text-theme-accent hover:underline font-Pop">yarlvillamon@gmail.com</a></p>
             </div>
 
             <form id="contactForm" class="max-w-lg mx-auto">
                 <div class="mb-4">
-                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent font-Pop">
                 </div>
                 <div class="mb-4">
-                    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent font-Pop">
                 </div>
                 <div class="mb-4">
-                    <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent"></textarea>
+                    <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-3 bg-theme-card border border-theme-muted rounded-lg text-theme-text focus:outline-none focus:ring-2 focus:ring-theme-accent font-Pop"></textarea>
                 </div>
-                <button type="submit" class="w-full contact-btn px-6 py-3 rounded-lg font-semibold transition-colors">
+                <button type="submit" class="w-full contact-btn px-6 py-3 rounded-lg font-Pop transition-colors">
                     Send Message
                 </button>
             </form>

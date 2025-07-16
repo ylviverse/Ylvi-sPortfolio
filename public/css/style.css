@@ -11,6 +11,33 @@
     font-display: swap; /* Improves loading performance */
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Improves loading performance */
+}
+
+@font-face {
+    font-family: 'Poppins_Bold';
+    src: url('/assets/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Improves loading performance */
+}
+.font-Poppins-Bold{
+    font-family: 'Poppins_Bold'!important;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.font-Pop{
+    font-family: 'Poppins'!important;
+    font-weight: normal;
+    font-style: normal;
+}
+
 .font-seanor {
     font-family: 'Seanor', serif !important;
     font-weight: normal;
@@ -28,7 +55,7 @@
     --theme-accent: #54E0C7;
     --theme-muted: #8ca1c3;
     --theme-sub: #2c3e50; 
-    --theme-text: #ffffff;
+    --theme-white: #ffffff;
     --theme-ylvi: linear-gradient(135deg, #EEAEAE 10%, #94BBE9 100%);
 
 }
