@@ -11,30 +11,47 @@
 </head>
 <body class="gradient-bg min-h-screen">
     <!-- Header -->
-    <header class="flex justify-between items-center px-4 md:px-8 py-6 gradient-bg">
+    <header class="sticky top-0 z-50 flex justify-between items-center px-4 md:px-8 py-6 gradient-bg transition-colors duration-300">
         
-        <a href="#about" class="fade-in-up">
-            <img src="/assets/yarl-logo-pink.png" alt="Ylvi's Portfolio Logo" class="h-9 md:h-9">
-        </a>
+        <!-- Left: Logo -->
+        <div class="flex-1 flex justify-start">
+            <a href="#home" class="fade-in-up ml-2 md:ml-4">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-transparent flex items-center justify-center overflow-hidden">
+                    <lottie-player
+                        src="/assets/header_cat.json"
+                        background="transparent"
+                        speed="1"
+                        class="h-8 md:h-10 w-8 md:w-10"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </a>
+        </div>
         
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-20 fade-in-up">
-            <a href="#home" class="nav-link text-theme-muted text-lg font-Pop ">HOME</a>
-            <a href="#project" class="nav-link text-theme-muted text-lg font-Pop">PROJECTS</a>
-            <a href="#about" class="nav-link text-theme-muted text-lg font-Pop">ABOUT</a>
+        <!-- Center: Desktop Navigation -->
+        <nav class="hidden md:flex justify-center flex-grow">
+            <div class="flex space-x-12 fade-in-up">
+                <a href="#home" class="nav-link text-theme-muted text-lg font-Pop">HOME</a>
+                <a href="#project" class="nav-link text-theme-muted text-lg font-Pop">PROJECTS</a>
+                <a href="#about" class="nav-link text-theme-muted text-lg font-Pop">ABOUT</a>
+            </div>
         </nav>
         
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden text-theme-accent text-2xl z-50">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-        
-        <!-- Desktop Contact Button -->
-        <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="hidden md:block contact-btn px-6 py-2 rounded-full font-Pop transition-colors fade-in-up">
-            CONTACT ME
-        </button>
+        <!-- Right: Buttons -->
+        <div class="flex-1 flex justify-end">
+            <!-- Desktop Contact Button -->
+            <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" class="hidden md:block contact-btn px-6 py-2 rounded-full font-Pop transition-colors fade-in-up">
+                CONTACT ME
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-theme-accent text-2xl z-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </header>
 
     <!-- SINGLE Mobile Menu Overlay -->
@@ -57,7 +74,7 @@
 
     <!-- Main Content -->
        <!-- Main Content -->
-       <main class="flex flex-col lg:flex-row items-center justify-center min-h-[80vh] px-4 md:px-8 space-y-8 lg:space-y-0 lg:space-x-16 py-16 lg:py-0">
+       <main id="home" class="flex flex-col lg:flex-row items-center justify-center min-h-[80vh] px-4 md:px-8 space-y-8 lg:space-y-0 lg:space-x-16 py-16 lg:py-0">
         <!-- Phone Mockup -->
         <div class="relative fade-in-up">
            
@@ -68,14 +85,16 @@
                 <div class="w-full h-full bg-transparent rounded-[2rem] relative overflow-hidden">
                     <div class="flex flex-col justify-center items-center h-full space-y-3">
                         <!-- Profile Image -->
-                        <div class="w-20 md:w-24 h-20 md:h-24 rounded-full overflow-hidden border-4 border-black shadow-lg">
-                            <img 
-                                id="profileImage"
-                                src="/assets/Profile_yarl_transparent.png" 
-                                alt="Yarl Villanueva"
-                                class="w-full h-full object-cover"
-                            />
-                        </div>
+                        <a href="#about" class="transition-transform duration-300 hover:scale-105">
+                            <div class="w-20 md:w-24 h-20 md:h-24 rounded-full overflow-hidden border-4 border-black shadow-lg cursor-pointer">
+                                <img 
+                                    id="profileImage"
+                                    src="/assets/Profile_yarl_transparent.png" 
+                                    alt="Yarl Villanueva"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                        </a>
                         
                         <!-- Lottie Animation -->
                         <div class="w-16 h-16 md:w-24 md:h-24">
@@ -142,25 +161,6 @@
             </div>
         </div>
     </main>
-
-      <!-- Home Section -->
-      <section id="home" class="py-20 px-6 md:px-8 section-bg fade-in-element">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-Poppins-Bold  heading-main mb-4 font-bold">WELCOME TO MY PORTFOLIO</h2>
-            
-            <!-- Flex container for dash and greeting -->
-            <div class="flex justify-center items-center space-x-4 my-6">
-                <img src="/assets/dash.png" alt="Decorative dash" class="w-48">
-                <p class="text-theme-muted font-Pop text-1xl text-left">Hey there!<br> <br> Thanks for visiting my website :></p>
-            </div>
-
-            <p class="text-theme-muted font-Pop text-lg mb-4 text-center">
-                I specialize with DART, FLUTTER, FIREBASE, SUPABASE <br>and a little bit of TENSORFLOW for AI integration<br> <br>
-                If you're interested with these skillset<br> <br>
-                Feel free to take a scroll down and <br>check out some of the projects I've worked on.
-            </p>
-        </div>
-    </section>
 
     <!-- Projects Section -->
     <section id="project" class="py-20 px-4 md:px-8 gradient-bg fade-in-element">
