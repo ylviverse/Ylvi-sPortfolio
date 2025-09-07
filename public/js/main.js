@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadCVBtn.addEventListener('click', function() {
             // Create a temporary link element
             const link = document.createElement('a');
-            link.href = '/assets/flutter_cv.pdf';
-            link.download = 'Yarl_Villanueva_CV.pdf';
+            link.href = '/assets/ylvi_cv.pdf'; 
+            link.download = 'Yarl_CV.pdf';
             link.target = '_blank';
             
             // Append to body, click, and remove
