@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
 </head>
 <body class="gradient-bg min-h-screen">
     <!-- Header -->
@@ -18,7 +20,7 @@
             <a href="#home" class="fade-in-up ml-2 md:ml-4">
                 <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-transparent flex items-center justify-center overflow-hidden">
                     <lottie-player
-                        src="/assets/header_cat.json"
+                        src="/assets/animation/header_cat.json"
                         background="transparent"
                         speed="1"
                         class="h-8 md:h-10 w-8 md:w-10"
@@ -89,7 +91,7 @@
                             <div class="w-20 md:w-24 h-20 md:h-24 rounded-full overflow-hidden border-4 border-black shadow-lg cursor-pointer">
                                 <img 
                                     id="profileImage"
-                                    src="/assets/Profile_yarl_transparent.png" 
+                                    src="/assets/logo/Profile_yarl_transparent.png" 
                                     alt="Yarl Villanueva"
                                     class="w-full h-full object-cover"
                                 />
@@ -99,7 +101,7 @@
                         <!-- Lottie Animation -->
                         <div class="w-16 h-16 md:w-24 md:h-24">
                             <lottie-player
-                                src="/assets/Hello (apple).json"
+                                src="/assets/animation/Hello (apple).json"
                                 background="transparent"
                                 speed="1"
                                 style="width: 100%; height: 100%;"
@@ -127,22 +129,22 @@
             <!-- Technology Icons -->
             <div class="flex justify-center lg:justify-start space-x-4 mb-8">
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="Dart">
-                    <img src="/assets/dart.svg" alt="Dart" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/dart.svg" alt="Dart" class="w-8 h-8 object-contain">
                 </div> 
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="Flutter">
-                    <img src="/assets/flutter-logo.svg" alt="Flutter" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/flutter-logo.svg" alt="Flutter" class="w-8 h-8 object-contain">
                 </div>
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="Firebase">
-                    <img src="/assets/firebase-1.svg" alt="Firebase" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/firebase-1.svg" alt="Firebase" class="w-8 h-8 object-contain">
                 </div>
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="Supabase">
-                    <img src="/assets/supabase-logo-icon.svg" alt="Supabase" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/supabase-logo-icon.svg" alt="Supabase" class="w-8 h-8 object-contain">
                 </div>      
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="Git">
-                    <img src="/assets/git-icon.svg" alt="Git_Logo" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/git-icon.svg" alt="Git_Logo" class="w-8 h-8 object-contain">
                 </div>     
                 <div class="tech-icon w-12 h-12 bg-transparent rounded-lg flex items-center justify-center cursor-pointer p-2" title="TensorFlow">
-                    <img src="/assets/tensorflow-2.svg" alt="TensorFlow" class="w-8 h-8 object-contain">
+                    <img src="/assets/logo/tensorflow-2.svg" alt="TensorFlow" class="w-8 h-8 object-contain">
                 </div> 
             </div>
 
@@ -171,35 +173,37 @@
                 <div class="bg-theme-card p-6 rounded-lg">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-transparent rounded-xl flex items-center justify-center mr-3">
-                            <img src="/assets/agrolens_logo_transparent.png" alt="Agrolens Logo" class="w-10 h-10 object-contain">
+                            <img src="/assets/logo/agrolens_logo_transparent.png" alt="Agrolens Logo" class="w-10 h-10 object-contain">
                         </div>
                         <h3 class="text-xl font-Poppins-Bold header-title">Agrolens</h3>
                     </div>
                     <p class="text-theme-muted mb-6 font-Pop">A flutter app built for farmers in detecting rice leaf disease using CNN models</p>
                     
+                    
                     <div class="flex justify-center mb-4">
-                        <div class="relative">
-                            <div class="absolute top-1 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-black rounded-b-xl z-20"></div>
-                            
-                            <div class="w-32 h-64 rounded-2xl p-1.5 phone-shadow" style="background: #000000;">
-                                <div class="w-full h-full bg-white rounded-xl relative overflow-hidden">
-                                    <div class="flex flex-col justify-center items-center h-full space-y-2 bg-green-200">
-                                        <div class="w-16 h-16 md:w-24 md:h-24">
-                                            <lottie-player
-                                                src="/assets/Camera.json"
-                                                background="transparent"
-                                                speed="1"
-                                                style="width: 100%; height: 100%;"
-                                                loop
-                                                autoplay>
-                                            </lottie-player>
+                        <div class="w-32 h-64 rounded-2xl p-1.5 phone-shadow" style="background: transparent;">
+                            <div class="w-full h-full bg-white rounded-xl relative overflow-hidden">
+                                <!-- Swiper Container -->
+                                <div class="swiper agrolensSwiper h-full">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/assets/screenshots/A_ss1.PNG" alt="Agrolens Screenshot 1" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/assets/screenshots/A_ss2.PNG" alt="Agrolens Screenshot 2" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/assets/screenshots/A_ss3.PNG" alt="Agrolens Screenshot 3" class="w-full h-full object-cover">
                                         </div>
                                     </div>
-                                    <div class="absolute bottom-0.5 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-black rounded-full"></div>
+                                    <!-- Pagination dots -->
+                                    <div class="swiper-pagination"></div>
                                 </div>
+                                <div class="absolute bottom-0.5 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-black rounded-full"></div>
                             </div>
                         </div>
                     </div>
+                    
                     
                     <div class="flex justify-center space-x-3 mt-4">
                         <button class="px-4 py-2 bg-theme-accent text-theme-muted rounded-lg text-sm font-Pop hover:bg-theme-yellow transition-colors">
@@ -223,7 +227,7 @@
                 <div class="bg-theme-card p-6 rounded-lg">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-transparent rounded-xl flex items-center justify-center mr-3">
-                            <img src="/assets/Logo_Final-removebg-preview.png" alt="Vehicall Logo" class="w-10 h-10 object-contain">
+                            <img src="/assets/logo/Logo_Final-removebg-preview.png" alt="Vehicall Logo" class="w-10 h-10 object-contain">
                         </div>
                         <h3 class="text-xl font-Poppins-Bold header-title">Vehicall</h3>
                     </div>
@@ -237,7 +241,7 @@
                                 <div class="w-full h-full bg-white rounded-xl relative overflow-hidden">
                                     <div class="flex flex-col justify-center items-center h-full space-y-2 bg-blue-50">
                                         <div class="w-16 h-16 md:w-24 md:h-24">
-                                            <img src="/assets/Logo_Final-removebg-preview.png" alt="Vehicall Logo" class="w-full h-full object-contain">
+                                            <img src="/assets/logo/Logo_Final-removebg-preview.png" alt="Vehicall Logo" class="w-full h-full object-contain">
                                         </div>
                                     </div>
                                     <div class="absolute bottom-0.5 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-black rounded-full"></div>
@@ -285,7 +289,7 @@
                 <div class="flex justify-center items-center">
                     <div class="w-full h-full rounded-3xl overflow-hidden shadow-lg flex items-center justify-center bg-theme-card p-4">
                       <img 
-                        src="/assets/profile.JPG" 
+                        src="/assets/logo/profile.JPG" 
                         alt="Profile" 
                         class="max-h-full max-w-full object-contain" 
                       />

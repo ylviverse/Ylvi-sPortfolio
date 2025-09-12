@@ -245,5 +245,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Observe all sections
     sections.forEach(section => observer.observe(section));
+// Initialize Swiper for Agrolens
+const agrolensSwiper = new Swiper('.agrolensSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.agrolensSwiper .swiper-pagination',
+        clickable: true,
+    },
+});
+
+// Initialize Swiper for Vehicall
+const vehicallSwiper = new Swiper('.vehicallSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.vehicallSwiper .swiper-pagination',
+        clickable: true,
+    },
+});
 });
    

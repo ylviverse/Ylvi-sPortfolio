@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Seanor';
-    src: url('/assets/roldes.otf' );
+    src: url('/assets/fonts/roldes.otf' );
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* Improves loading performance */
@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/assets/Poppins-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* Improves loading performance */
@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'Poppins_Bold';
-    src: url('/assets/Poppins-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* Improves loading performance */
@@ -311,8 +311,6 @@ section {
 
 
 
-/* ...existing code... */
-
 /* Force all form inputs to use correct colors */
 form input,
 form textarea {
@@ -325,7 +323,7 @@ form textarea::placeholder {
     opacity: 0.7;
 }
 
-/* ...existing code... */
+
 
 /* CV Button Styling */
 .cv-btn {
@@ -409,4 +407,21 @@ form textarea::placeholder {
 .fade-in-element.is-active {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+/* Customize Swiper pagination dots */
+.swiper-pagination-bullet {
+    width: 3px !important;
+    height: 3px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff !important;
+}
+
+/* Position pagination dots */
+.swiper-pagination {
+    bottom: 8px !important;
 }
