@@ -55,7 +55,7 @@
     --theme-accent: #54E0C7;
     --theme-muted: #8ca1c3;
     --theme-sub: #2c3e50; 
-    --theme-white: #ffffff;
+    --theme-white: #ffffff !important;
     --theme-ylvi: linear-gradient(135deg, #EEAEAE 10%, #94BBE9 100%);
 
 }
@@ -314,7 +314,7 @@ section {
 /* Force all form inputs to use correct colors */
 form input,
 form textarea {
-    color: var(--theme-text) !important;
+    color: var(--theme-white) !important;
 }
 
 form input::placeholder,
