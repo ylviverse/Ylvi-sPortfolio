@@ -130,9 +130,10 @@ body {
     width: 0;
     height: 2px;
     bottom: -4px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--theme-accent);
-    transition: width 0.4s ease;
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -389,18 +390,25 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-/* UPDATED: Scroll Animation Classes */
+/* --- START: RELIABLE ANIMATION FIX --- */
+
+/* Default state for all screens (visible) */
 .fade-in-element {
-    opacity: 0;
-    transform: translateY(30px);
-    /* Make the transition slightly faster for a snappier feel */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+    .fade-in-element.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 
 /* This is now the "visible but faded" state */
 .fade-in-element.is-visible {
-    opacity: 0.4; /* Faded out */
-    transform: translateY(0) scale(0.98); /* Slightly smaller */
+    opacity: 0;
+    transform: translateY(10px) 
 }
 
 /* This is the "fully active" state */
