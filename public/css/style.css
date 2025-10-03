@@ -394,9 +394,9 @@ form textarea::placeholder {
 
 /* Default state for all screens (visible) */
 .fade-in-element {
-    opacity: 1;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
     .fade-in-element.is-visible {
@@ -405,17 +405,6 @@ form textarea::placeholder {
     }
 
 
-/* This is now the "visible but faded" state */
-.fade-in-element.is-visible {
-    opacity: 0;
-    transform: translateY(10px) 
-}
-
-/* This is the "fully active" state */
-.fade-in-element.is-active {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
 
 /* Customize Swiper pagination dots */
 .swiper-pagination-bullet {

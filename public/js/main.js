@@ -215,33 +215,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.fade-in-element');
     let activeSection = null;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // When a section becomes visible for the first time, mark it.
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            }
-
-            // Find the entry that is most visible in the viewport
-            const mostVisible = entries.reduce((prev, current) => {
-                return (prev.intersectionRatio > current.intersectionRatio) ? prev : current;
-            });
-
-            // If there's a new most-visible section, update the active state
-            if (mostVisible.isIntersecting && mostVisible.target !== activeSection) {
-                // Remove active class from the old section
-                if (activeSection) {
-                    activeSection.classList.remove('is-active');
-                }
-                // Add active class to the new section
-                activeSection = mostVisible.target;
-                activeSection.classList.add('is-active');
-            }
-        });
-    }, {
-        // Trigger when a section is 50% or 75% visible
-        threshold: [0.5, 0.75]
+    
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
     });
+}, {
+    threshold: 0.1,  // Changed from 0.5 or 0.75 to 0.1 - triggers earlier
+    rootMargin: '0px 0px -50px 0px'  // Triggers slightly before element is fully visible
+});
+
+// Observe all fade-in elements
+const fadeElements = document.querySelectorAll('.fade-in-element');
+fadeElements.forEach(el => observer.observe(el));
+
 
     // Observe all sections
     sections.forEach(section => observer.observe(section));
