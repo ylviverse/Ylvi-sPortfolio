@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadCVBtn.addEventListener('click', function() {
             // Create a temporary link element
             const link = document.createElement('a');
-            link.href = '/assets/flutter_cv.pdf'; 
+            link.href = '/assets/CV_final.pdf'; 
             link.download = 'Villanueva_CV.pdf';
             link.target = '_blank';
             
