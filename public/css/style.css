@@ -8,7 +8,7 @@
     src: url('/assets/fonts/roldes.otf' );
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Improves loading performance */
+    font-display: swap; 
 }
 
 @font-face {
@@ -16,7 +16,7 @@
     src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Improves loading performance */
+    font-display: swap; 
 }
 
 @font-face {
@@ -24,7 +24,7 @@
     src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Improves loading performance */
+    font-display: swap; 
 }
 .font-Poppins-Bold{
     font-family: 'Poppins_Bold'!important;
@@ -54,6 +54,7 @@
     --theme-yellow: #FFD600;
     --theme-accent: #54E0C7;
     --theme-muted: #8ca1c3;
+    --theme-muted-light: #F5E9D8;
     --theme-sub: #2c3e50; 
     --theme-white: #ffffff !important;
     --theme-ylvi: linear-gradient(135deg, #EEAEAE 10%, #94BBE9 100%);
